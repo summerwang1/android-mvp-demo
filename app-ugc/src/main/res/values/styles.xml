@@ -1,0 +1,79 @@
+<resources>
+
+    <!-- -->
+    <declare-styleable name="BaseTheme">
+        <attr name="actionBarIconColor" format="color"/>
+        <attr name="actionBarInsetStart" format="dimension"/>
+        <attr name="spinnerBarInsetStart" format="dimension"/>
+        <attr name="popupItemBackground" format="reference"/>
+        <attr name="photoItemForeground" format="reference"/>
+        <attr name="photoItemForegroundBorderless" format="reference"/>
+    </declare-styleable>
+
+    <!-- base -->
+    <style name="Theme.UGC" parent="Theme.XINFAN.Base"/>
+
+    <style name="Theme.XINFAN.Base" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="actionBarIconColor">#fff</item>
+        <item name="popupItemBackground">?android:selectableItemBackground</item>
+        <item name="photoItemForeground">?android:selectableItemBackground</item>
+        <item name="photoItemForegroundBorderless">?android:selectableItemBackground</item>
+        <item name="actionBarItemBackground">@color/appAction_Background</item>
+        <item name="dropDownListViewStyle">@style/DrapDownListView</item>
+        <!--<item name="vpiCirclePageIndicatorStyle">@style/CustomCirclePageIndicator</item>-->
+        <item name="colorPrimary">@color/appAction_Background</item>
+        <item name="colorPrimaryDark">@color/appAction_Background</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="windowActionBar">false</item>
+        <!-- 隐藏标题栏 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <!-- <item name="android:windowBackground">@color/window_background</item> -->
+        <item name="android:popupMenuStyle">@style/Widget.IMA.PopupMenu</item>
+        <item name="android:listPopupWindowStyle">@style/Widget.IMA.PopupMenu</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/TextAppearance.LargePopupMenu</item>
+        <item name="android:dropDownListViewStyle">@style/Widget.IMA.ListView.DropDown</item>
+        <item name="android:windowAnimationStyle">@style/ActivityTransitions</item>
+        <!--&lt;!&ndash; 隐藏状态栏 &ndash;&gt;-->
+        <!--<item name="android:windowFullscreen">true</item>-->
+
+    </style>
+
+    <style name="DrapDownListView" parent="@style/Widget.AppCompat.Light.ListView.DropDown">
+        <item name="android:dividerHeight">1px</item>
+        <item name="android:divider">@color/list_item_divider</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="Widget.IMA.PopupMenu" parent="Widget.AppCompat.Light.PopupMenu">
+        <item name="android:dropDownSelector">?popupItemBackground</item>
+    </style>
+
+    <style name="TextAppearance.LargePopupMenu" parent="TextAppearance.AppCompat.Widget.PopupMenu.Large">
+        <item name="android:textColor">@color/appAction_Background</item>
+    </style>
+
+    <style name="Widget.IMA.ListView.DropDown" parent="Widget.AppCompat.Light.ListView.DropDown">
+        <item name="android:listSelector">?popupItemBackground</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
+
+    <style name="ActivityTransitions" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_open_enter_slide_in_left
+        </item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_open_exit_fade_back</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_close_enter_fade_forward
+        </item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_close_exit_slide_out_right
+        </item>
+    </style>
+
+</resources>
+

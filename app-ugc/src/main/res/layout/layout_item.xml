@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/orange_300"
+    android:layout_marginTop="@dimen/space_5">
+    
+    <TextView
+        android:id="@+id/news_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_5"
+        android:text="95530"
+        />
+    <TextView
+        android:id="@+id/news_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="今天发生了一些奇怪的事"/>
+
+</LinearLayout>
